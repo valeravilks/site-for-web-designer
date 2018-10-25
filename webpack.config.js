@@ -51,7 +51,19 @@ let conf = { // Экпорт объекта с настройками Webpack
                             publicPath: 'img/'
                         }
                     }
-
+                ]
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'font/',
+                            publicPath: 'font/'
+                        }
+                    }
                 ]
             }
         ]

@@ -5,15 +5,34 @@
   }
   .menu{
     align-self: center;
+
+    img{
+      position: absolute;
+      bottom: -18px;
+      left: calc(50% - 4px);
+      display: none;
+    }
     a{
-      margin-left: 43px;
+      margin-left: 38px;
       text-decoration: none;
+      position: relative;
+      color: rgba(0, 0, 0, 0.5);
+      &:hover{
+        color: rgba(0, 0, 0, 0.8);
+      }
+
     }
     li{
       display: inline;
+      font: 18px "Avenir Next Cyr";
+
     }
   }
   .logo{
     flex-grow: 1;
   }
 }
+.active_page a{
+  color: rgba(0, 0, 0, 0.8)!important;
+}
+
