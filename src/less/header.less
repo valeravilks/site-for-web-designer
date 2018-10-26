@@ -1,11 +1,12 @@
 .header{
+  z-index: 100;
   padding-top: 26px;
+  flex-grow: 1;
   & > div{
     display: flex;
   }
   .menu{
     align-self: center;
-
     img{
       position: absolute;
       bottom: -18px;
@@ -20,12 +21,10 @@
       &:hover{
         color: rgba(0, 0, 0, 0.8);
       }
-
     }
     li{
       display: inline;
       font: 18px "Avenir Next Cyr";
-
     }
   }
   .logo{
