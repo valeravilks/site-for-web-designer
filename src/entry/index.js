@@ -1,5 +1,6 @@
 import '../less/style.less';
-import $ from 'jquery';
+import $ from 'jquery'
+import 'jquery-cropper';
 
 $(document).ready(function(){
 
@@ -15,6 +16,7 @@ $(document).ready(function(){
         }
     });
 
+    // crop home_img
 
 });
 

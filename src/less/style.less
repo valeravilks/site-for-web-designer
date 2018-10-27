@@ -11,6 +11,15 @@
 
 .wrapper{
   .wrapper();
+  .lg-block({
+    max-width: 880px;
+  });
+  .md-block({
+    max-width: 700px;
+  });
+  .sm-block({
+    max-width: 560px;
+  });
 }
 .row{
    .row-flex();
@@ -18,7 +27,10 @@
 body{
   background-color: @firstColor;
   font-family: "DIN Pro", "sans-serif" ;
+  position: relative;
 }
+
+// Social icon
 .social_icon{
   position: absolute;
   top: 0;
@@ -59,3 +71,29 @@ body{
   height: 100vh;
   position: relative;
 }
+
+// Home image
+.home_img{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  & > div{
+    height: 100vh;
+  }
+  .cont{
+    position: relative;
+  }
+  .img1{
+    position: absolute;
+    top: 184px;
+    left: -115px;
+    overflow: hidden;
+  }
+  .image1{
+    background-image: url("../img/img_1_1.png");
+  }
+}
+
