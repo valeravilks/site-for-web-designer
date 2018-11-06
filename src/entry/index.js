@@ -17,14 +17,14 @@ $(document).ready(function(){
         }
     });
 
-    rotate('.img3_1', 5000);
-    rotate('.img7_1', 5000);
-    rotate('.img8_1', 5000);
-    rotate('.img9_1', 5000);
-    rotate('.img10_1', 5000);
-    rotate('.img11_1', 5000);
-    rotate('.img13_1', 5000);
-    rotate('.img14_1', 5000);
+    rotate('.img3_1', 8000, 600);
+    rotate('.img7_1', 8000, 400);
+    rotate('.img8_1', 8000, 200);
+    rotate('.img9_1', 8000, 0);
+    rotate('.img10_1', 8000, 500);
+    rotate('.img11_1', 8000, 300);
+    rotate('.img13_1', 8000, 700);
+    rotate('.img14_1', 8000, 100);
 
     // function rotate element
     function rotate(selector, interval, delay){
@@ -36,21 +36,24 @@ $(document).ready(function(){
 
         let i = 0;
 
-        let timerId = setTimeout(function tick() {
-            array_img.css('transition', 'all 1s ease');
-           // array_img(i).css('transform', 'rotateY(90deg)')
-            array_img.eq(i).css('transform', 'rotateY(90deg)');
-            if(i === array_img.length - 1){
-                i = -1;
-            }
-            i++;
-            array_img.eq(i).css('transform', 'rotateY(0)').css('transition', 'all 1s ease 1s');
+        setTimeout(function () {
+            let timerId = setTimeout(function tick() {
+                array_img.css('transition', 'all 1s ease-in');
+                // array_img(i).css('transform', 'rotateY(90deg)')
+                array_img.eq(i).css('transform', 'rotateY(90deg)');
+                if(i === array_img.length - 1){
+                    i = -1;
+                }
+                i++;
+                array_img.eq(i).css('transform', 'rotateY(0)').css('transition', 'all 1s ease-out 1s');
 
-            timerId = setTimeout(tick, interval);
-        }, interval);
+                timerId = setTimeout(tick, interval);
+            }, delay);
+        }, delay);
+
+
 
 
 
     }
 });
-
