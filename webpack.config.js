@@ -14,6 +14,7 @@ let conf = { // Экпорт объекта с настройками Webpack
     },
     devServer: { // Использование DevServer
         overlay: true // Показывать слой с отладной
+
     },
     module: { // Модули Webpack
         rules: [

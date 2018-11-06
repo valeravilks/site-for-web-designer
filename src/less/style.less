@@ -88,12 +88,124 @@ body{
   }
   .img1{
     position: absolute;
+    left: -60px;
+    top: 223px;
+  }
+  .img2{
+    position: absolute;
+    left: 95px;
     top: 184px;
-    left: -115px;
-    overflow: hidden;
+  }
+  .img3_1{
+    position: absolute;
+    left: 346px;
+    top: 308px;
+    z-index: 10;
+    width: 140px;
+  }
+  .img4{
+    position: absolute;
+    left: -114px;
+    top: 412px;
+  }
+  .img5{
+    position: absolute;
+    left: 134px;
+    top: 431px;
+    z-index: 10;
+  }
+  .img6{
+    position: absolute;
+    left: 430px;
+    top: 412px;
+  }
+  .img7_1{
+    position: absolute;
+    left: 111px;
+    top: 209px;
+    width: 150px;
+  }
+  .img8_1{
+    position: absolute;
+    left: -9px;
+    top: 352px;
+    z-index: 15;
+    width: 200px;
+  }
+  .img9_1{
+    position: absolute;
+    left: -55px;
+    top: 509px;
+    width: 110px;
+  }
+  .img10_1{
+    position: absolute;
+    left: 173px;
+    top: 332px;
+    width: 270px;
+  }
+  .img11_1{
+    position: absolute;
+    left: 95px;
+    top: 586px;
+    width: 130px;
+  }
+  .img12{
+    position: absolute;
+    left: 375px;
+    top: 545px;
+  }
+  .img13_1{
+    position: absolute;
+    left: 499px;
+    top: 539px;
+    width: 80px;
+  }
+  .img14_1{
+    position: absolute;
+    left: -22px;
+    top: 255px;
+    width: 78px;
   }
   .image1{
     background-image: url("../img/img_1_1.png");
   }
 }
+.pos_img{
+  position: absolute;
+  & > div{
+    position: relative;
+    & > img{
+      position: absolute;
 
+    }
+  }
+}
+.front{
+  transform: rotateY(0deg);
+  transition: 4s;
+  display: block!important;
+  backface-visibility: hidden;
+  perspective: 10000px;
+}
+.front_flip{
+  transform: rotateY(180deg);
+}
+.back{
+  transform: rotateY(180deg);
+  display: block!important;
+  transition: 4s;
+  backface-visibility: hidden;
+  perspective: 10000px;
+}
+.back_flip{
+  transform: rotateY(360deg);
+}
+.up_image{
+  transform: rotateY(90deg);
+  transition: 0.5s ease;
+}
+.down_image{
+  transform: rotateY(90deg);
+  transition: 0.5s ease;
+}
