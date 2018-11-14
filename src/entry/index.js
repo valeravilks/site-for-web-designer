@@ -70,4 +70,52 @@ $(document).ready(function(){
 
 
     }
+
+    // Show mobile menu
+    $('.header .button').click(function(){
+        $('.header .button').hide();
+        $('.cross').show();
+        $('.menu').slideToggle();
+        $('.blackBlock').animate({
+            opacity: 'toggle',
+            height: 'toggle'
+        });
+    });
+
+    // Hide menu on click black block
+    $('.blackBlock').click(function () {
+        $('.header .button').show();
+        $('.cross').hide();
+        $('.menu').slideToggle();
+        $('.blackBlock').animate({
+            opacity: 'toggle',
+            height: 'toggle'
+        });
+    });
+
+    // Show menu mobile and button close
+    function showMB(){
+        if($(window).width() > 1244) {
+            $('.menu').show();
+        } else {
+            $('.cross').hide();
+            $('.menu').hide();
+        }
+    }
+    showMB();
+    $(window).resize(function(){
+        showMB();
+    });
+
+
+    // Close mobile menu
+    $('.cross').click(function () {
+        $('.header .button').show();
+        $('.cross').hide();
+        $('.menu').slideToggle();
+        $('.blackBlock').animate({
+            opacity: 'toggle',
+            height: 'toggle'
+        });
+    });
 });
