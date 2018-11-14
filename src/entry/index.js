@@ -4,17 +4,31 @@ import 'jquery-cropper';
 
 
 $(document).ready(function(){
-
     // active menu item
     let actionMenu = $('.active_page');
     actionMenu.children().children().show();
 
     // menu circle item hover show/hide
-    $('.header .menu a').hover(function(e){
+    $('.header .menu a').hover(function (e) {
         let eventObject = $(e.target);
-        if(!eventObject.parent().hasClass('active_page')){
+        if (!eventObject.parent().hasClass('active_page')) {
             eventObject.children().toggle();
         }
+    });
+
+    // function show circle menu img
+    function circleImg(){
+        if($(window).width() > 1244) {
+            $('.menu img').css('opacity', '1');
+        } else {
+            $('.menu img').css('opacity', '0');
+        }
+    }
+
+    // Show circle resize window
+    circleImg();
+    $(window).resize(function(){
+        circleImg();
     });
 
     rotate('.img3_1', 8000, 600);

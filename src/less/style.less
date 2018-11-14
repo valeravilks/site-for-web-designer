@@ -7,6 +7,7 @@
 @import "variable";
 @import "header";
 @import "footer";
+@import "servic";
 
 
 .wrapper{
@@ -70,6 +71,20 @@ body{
   flex-direction: column;
   height: 100vh;
   position: relative;
+  .button{
+    width: 30px;
+    align-self: center;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover{
+      opacity: 0.8;
+    }
+    .lg-block({
+      display: block;
+    });
+  }
 }
 
 // Home image
@@ -209,3 +224,106 @@ body{
   transform: rotateY(90deg);
   transition: 0.5s ease;
 }
+.home_des{
+  position: absolute;
+  top: calc(50% - 120px);
+  left: calc(50% - 30px);
+  .text{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: normal;
+    font-family: 'DIN Pro Cond', 'serif';
+  }
+  .button{
+    margin-top: 70px;
+  //  background: linear-gradient(260.3deg, #880E4F -3.47%, #C51162 106.39%);
+    border-radius: 30px;
+    line-height: normal;
+    font: 16px "Avenir Next Cyr";
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #D6C8C3;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    transition: all 5s ease;
+    background: linear-gradient(218deg, #880e4f, #c0c526);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 17s ease infinite;
+    -moz-animation: AnimationName 17s ease infinite;
+    animation: AnimationName 17s ease infinite;
+  }
+}
+.menu{
+  .lg-block({
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.5);
+    li{
+      align-self: center;
+      padding: 20px 40px;
+      a{
+        margin-left: 0!important;
+        padding: 20px 40px;
+      }
+
+    }
+  });
+}
+.header{
+  position: relative;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+
+//Services
+
+.services{
+  padding-top: 60px;
+  .img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img{
+      &:nth-child(2){
+        margin: 0 20px;
+      }
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+  flex-grow: 100;
+  .head{
+    text-align: center;
+    margin: 65px 0 70px;
+    .head_t(36px);
+  }
+}
+
