@@ -8,7 +8,7 @@
 @import "header";
 @import "footer";
 @import "servic";
-
+@import "radiobutton";
 
 .wrapper{
   .wrapper();
@@ -211,6 +211,9 @@ body{
     }
   }
 }
+
+
+
 .front{
   transform: rotateY(0deg);
   transition: 4s;
@@ -293,7 +296,7 @@ body{
       text-align: center;
       border-bottom: 1px solid #c49f75;
       &:nth-last-child(1){
-        border-bottom: 0px;
+        border-bottom: 0;
       }
       a{
         margin-left: 0!important;
@@ -342,17 +345,89 @@ body{
 //Services
 
 .services{
+  .calc{
+    .head{
+      border-bottom: 1px solid #C49F75;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    .calc_quest{
+      .show{
+        display: block!important;
+      }
+      .quest{
+        display: none;
+      }
+      .qhead{
+        .head_t(24px);
+        padding-bottom: 40px;
+      }
+      label{
+        padding-top: 5px;
+      }
+      .calc_prev, .calc_next{
+        width: 70px;
+        height: 70px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: #D6C8C3;
+        border-radius: 50px;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover{
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .control_calc{
+        padding-top: 45px;
+        display: flex;
+        .calc_prev{
+          margin-right: 110px;
+        }
+        .calc_next{
+          cursor: pointer;
+          background: linear-gradient(215.54deg, #880E4F 6.55%, #C51162 94.64%);
+        }
+        .calc_next_img{
+          transform: scale(-1, 1);
+        }
+      }
+    }
+  }
   padding-top: 60px;
+  .tablePostimg{
+    display: none;
+    .xs-block({
+      display: block;
+    });
+  }
+  .price_top{
+    .block {
+      display: none !important;
+    }
+  }
+  .price_bottom{
+    .xs-block({
+      display: none;
+    });
+  }
   .img{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
     img{
+      .xs-block({
+        margin-bottom: 20px!important;
+      });
       &:nth-child(2){
         margin: 0 20px;
       }
+      &:nth-child(1){
+        .sm-block({
+          margin: 0 20px;
+        });
+      }
       cursor: pointer;
+      transition: all 0.5s ease;
       &:hover{
         opacity: 0.7;
       }
@@ -364,5 +439,138 @@ body{
     margin: 65px 0 70px;
     .head_t(36px);
   }
-}
+  .what_work{
+    .number{
+      .head_t(24px);
+      color: #C49F75;
+      font-weight: bold;
+    }
+    .head_step{
 
+      .head_t(24px);
+      margin-left: 5px;
+    }
+    .step{
+      .col();
+      .size(3);
+      .size-md(6);
+      .size-xs(12);
+      .shift-right(1);
+      .shift-md-right(0);
+      .sm-block({
+         margin-bottom: 30px;
+      });
+      .md-block({
+        margin-bottom: 30px;
+      });
+      margin-bottom: 90px;
+      position: relative;
+      order: 0;
+    }
+    .text{
+      margin-top: 5px;
+    }
+    .arrow_work{
+      position: absolute;
+      top: 0;
+      right: -120px;
+      .md-block({
+        display: none;
+      });
+    }
+    .arrow_work_2{
+      position: absolute;
+      top: 100px;
+      right: -100px;
+      .md-block({
+        display: none;
+      });
+    }
+    .row_step{
+      .step:nth-child(4){
+        order: 3;
+        .md-block({
+          order: 0;
+        });
+      }
+      .step:nth-child(5){
+        order: 2;
+        .md-block({
+          order: 0;
+        });
+        .arrow_work{
+          transform: scale(-1, 1);
+        }
+      }
+      .step:nth-child(6){
+        order: 1;
+        .md-block({
+          order: 0;
+        });
+        .arrow_work{
+          transform: scale(-1, 1);
+        }
+      }
+    }
+  }
+  .price{
+    .block{
+      display: none;
+    }
+    .price_button{
+      width: 200px;
+      height: 45px;
+      background: linear-gradient(260.91deg, #880E4F 0.46%, #C51162 99.46%);
+      border-radius: 30px;
+      color: #DFD3D1;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      margin: 150px auto 0;
+      & > div{
+        align-self: center;
+        .avenir();
+        font-weight: bold;
+      }
+    }
+  }
+  .price_bottom{
+
+    .xs-block({
+      display: none;
+    });
+  }
+  .img.price{
+    .price_button{
+      margin: 30px auto 0;
+    }
+  }
+
+}
+.table{
+  .headTable{
+    .head_t(24px);
+    font-weight: bold;
+  }
+  .textTable{
+    .textFont(20px);
+  }
+  tbody{
+    .textFont(20px);
+    tr{
+      border-bottom: 1px solid #C49F75;
+    }
+    th{
+      padding-top: 8px;
+    }
+  }
+  thead{
+    th{
+      padding: 0 50px 10px 0;
+
+    }
+  }
+}
+.table.table_pos{
+  margin: 60px auto 0;
+}

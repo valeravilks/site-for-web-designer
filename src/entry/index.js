@@ -118,4 +118,78 @@ $(document).ready(function(){
             height: 'toggle'
         });
     });
+
+    // Services 3 button
+    $('.price1').click(function(){
+        if($('.price1').hasClass('scale')){
+            $('.price1').removeClass('scale');
+            $('.price1_id').slideUp();
+            $('.what_work').slideDown();
+        } else {
+            $('.price1').addClass('scale');
+            $('.price2').removeClass('scale');
+            $('.price3').removeClass('scale');
+            $('.price1_id').slideDown();
+            $('.price2_id').slideUp();
+            $('.price3_id').slideUp();
+            $('.what_work').slideUp();
+        }
+    });
+    $('.price2').click(function(){
+        if($('.price2').hasClass('scale')){
+            $('.price2').removeClass('scale');
+            $('.price2_id').slideUp();
+            $('.what_work').slideDown();
+        } else {
+            $('.price2').addClass('scale');
+            $('.price1').removeClass('scale');
+            $('.price3').removeClass('scale');
+            $('.price2_id').slideDown();
+            $('.price1_id').slideUp();
+            $('.price3_id').slideUp();
+            $('.what_work').slideUp();
+        }
+    });
+    $('.price3').click(function(){
+        if($('.price3').hasClass('scale')){
+            $('.price3').removeClass('scale');
+            $('.price3_id').slideUp();
+            $('.what_work').slideDown();
+        } else {
+            $('.price3').addClass('scale');
+            $('.price2').removeClass('scale');
+            $('.price1').removeClass('scale');
+            $('.price3_id').slideDown();
+            $('.price2_id').slideUp();
+            $('.price1_id').slideUp();
+            $('.what_work').slideUp();
+        }
+    });
+
+    // calc
+
+    $('.calc_next').click(function(){
+        $('.quest.show').removeClass('show').next().addClass('show');
+        nextPrev();
+    });
+    $('.calc_prev').click(function(){
+        $('.quest.show').removeClass('show').prev().addClass('show');
+        nextPrev();
+    });
+    nextPrev();
+    function nextPrev() {
+        if($('#quest1').hasClass('show')){
+            $('.calc_prev').css('opacity', '0');
+            $('.calc_prev').css('тзь cursor', 'default');
+            return 'return';
+        } else {
+            $('.calc_prev').css('opacity', '1');
+        }
+        if($('#quest5').hasClass('show')){
+            $('.calc_next').css('opacity', '0');
+        } else {
+            $('.calc_next').css('opacity', '1');
+        }
+    }
+
 });
