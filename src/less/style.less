@@ -526,7 +526,7 @@ body{
       display: flex;
       justify-content: center;
       cursor: pointer;
-      margin: 150px auto 0;
+      margin: 30px auto 0;
       & > div{
         align-self: center;
         .avenir();
@@ -573,4 +573,14 @@ body{
 }
 .table.table_pos{
   margin: 60px auto 0;
+  min-width: 600px;
+  .sm-block({
+    min-width: 0px;
+  });
+
+}
+.price_text_buts{
+  text-align: center;
+  .head_t(20px);
+  margin-top: 80px;
 }

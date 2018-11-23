@@ -179,16 +179,16 @@ $(document).ready(function(){
     nextPrev();
     function nextPrev() {
         if($('#quest1').hasClass('show')){
-            $('.calc_prev').css('opacity', '0');
-            $('.calc_prev').css('тзь cursor', 'default');
+            $('.calc_prev').css('opacity', '0').css('z-index', '-100');
+        //    $('.calc_prev').css('cursor', 'default');
             return 'return';
         } else {
-            $('.calc_prev').css('opacity', '1');
+            $('.calc_prev').css('opacity', '1').css('z-index', '100');;
         }
         if($('#quest5').hasClass('show')){
-            $('.calc_next').css('opacity', '0');
+            $('.calc_next').css('opacity', '0').css('z-index', '-100');
         } else {
-            $('.calc_next').css('opacity', '1');
+            $('.calc_next').css('opacity', '1').css('z-index', '100');;
         }
     }
 

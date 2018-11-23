@@ -78,6 +78,10 @@ let conf = { // Экпорт объекта с настройками Webpack
         new HtmlWebpackPlugin({ // плагин для работы с html
             filename: 'services.html', // Имя выходного файла
             template: 'src/html/services.html' // Имя и путь входного файла
+        }),
+        new HtmlWebpackPlugin({ // плагин для работы с html
+            filename: 'my.html', // Имя выходного файла
+            template: 'src/html/my.html' // Имя и путь входного файла
         })
     ]
 };

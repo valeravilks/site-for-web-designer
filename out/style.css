@@ -1,0 +1,35 @@
+/*
+Theme Name: Svetlana
+ */
+body{
+  background-color: #dfd3d1;
+}
+
+/* Header */
+
+ul{
+  margin: 0;
+}
+.menu-item{
+  margin-left: 43px;
+}
+.menu-item a{
+  color: #706968;
+}
+.menu-item a:hover{
+  color: #433f3f;
+  text-decoration: none;
+}
+.menu{
+  list-style: none;
+  display: flex;
+}
+.header__container{
+  display: flex;
+}
+.header__menu{
+  display: flex;
+}
+.menu-first-menu-container{
+  align-self: center;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9cb0ec89-8f1b-4168-89fb-648588bb5f4f" name="Svetlana-webdesign.ru" url="http://vh132.timeweb.ru">
+        <fileTransfer host="vh132.timeweb.ru" port="21" rootFolder="/public_html/wp-content/themes/SvetlanaTheme">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
