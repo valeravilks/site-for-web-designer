@@ -1,5 +1,7 @@
 # Website development for web designer
 
+![](1.gif)
+
 See some pages here (<a href="https://valeravilks.github.io/site-for-web-designer/dist/index.html" target="_blank">click</a>)
 
 This site was developed for a web designer. The main task of the site is to demonstrate the work of the designer, as well as indicate information about his services and prices.
